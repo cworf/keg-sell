@@ -37,9 +37,11 @@ export class KegComponent implements OnInit {
     keg.pints = 12;
   }
 
-  newKeg(name, brand, price, apv, pints){
+  newKeg(name, brand, price, apv){
     this.kegs.push(new Keg(name, brand, price, apv));
-    console.log(this.kegs);
+  }
+
+  editKeg(keg) {
 
   }
 }
