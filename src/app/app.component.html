@@ -4,4 +4,6 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<app-keg></app-keg>
+<app-list-kegs [childKegs]="masterKegs" (clickSender)="editKeg($event)"></app-list-kegs>
+<keg-edit [childSelectedKeg]="selectedKeg" *ngIf="selectedKeg" (resetSend)="saveKeg()"></keg-edit>
+<new-keg (sendNew)="newKeg($event)"></new-keg>
